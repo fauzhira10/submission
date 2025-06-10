@@ -1,0 +1,478 @@
+:root {
+  --dasar: #8b4513;
+  --latar: #f5f5dc;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5f5dc;
+  color: white;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.navbar .navbar-nav {
+   list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.navbar .navbar-nav a {
+  color: #fff8dc;
+  transition: all 0.3s ease;
+  font-weight: 500;
+
+}
+
+.navbar .navbar-nav a:hover {
+  color: #b8860b;
+}
+
+.navbar .navbar-nav a::after {
+  content: " ";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--dasar);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff8dc;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #b8860b;
+}
+
+#hamburger {
+  display: none;
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  bottom: 0%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 248, 220, 1) 5%,
+    rgba(160, 82, 45, 0) 25%
+  );
+}
+
+.hero .content h1 {
+  font-size: 3em;
+  color: #fff8dc;
+  text-shadow: 1px 1px 3px rgba(160, 82, 45, 0.5);
+}
+
+.hero .content {
+  position: relative;
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  text-shadow: 1px 1px 3px rgba(160, 82, 45, 0.5);
+  line-height: 1.1;
+}
+
+.hero .content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.2;
+  color: #fff8dc;
+  background-color: var(--dasar);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(160, 82, 45, 0.5);
+  display: inline-block;
+}
+
+/* about section */
+.galeri {
+  padding: 4rem 7% 1.4rem;
+  color: #8b4513;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.galeri .langkah {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.galeri .langkah .gambar1 {
+  text-align: start;
+  display: flex;
+  align-items: center;
+  background-color: #fff8dc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(160, 82, 45, 0.5);
+  padding: 1.5rem;
+  max-width: 60rem;
+  width: 100%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.galeri .langkah .gambar1 img {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1.5rem;
+  border-bottom: none;
+}
+
+.galeri .langkah .gambar1 .Nglowong-title {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--dasar);
+}
+
+.galeri .langkah .gambar1 .Nglowong-ket {
+  color: #8b4513;
+  line-height: 1.5;
+}
+
+.galeri .langkah .gambar2 {
+  text-align: start;
+  display: flex;
+  align-items: center;
+  background-color: #fff8dc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(160, 82, 45, 0.5);
+  padding: 1.5rem;
+  max-width: 60rem;
+  width: 100%;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+
+.galeri .langkah .gambar2 img {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1.5rem;
+  border-bottom: none;
+}
+
+.galeri .langkah .gambar2 .Nembok-title {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--dasar);
+}
+
+.galeri .langkah .gambar2 .Nembok-ket {
+  color: #8b4513;
+  line-height: 1.5;
+}
+
+.galeri .langkah .gambar3 {
+  text-align: start;
+  display: flex;
+  align-items: center;
+  background-color: #fff8dc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(160, 82, 45, 0.5);
+  padding: 1.5rem;
+  max-width: 60rem;
+  width: 100%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.galeri .langkah .gambar3 img {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1.5rem;
+  border-bottom: none;
+}
+
+.galeri .langkah .gambar3 .Mbironi-title {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--dasar);
+}
+
+.galeri .langkah .gambar3 .Mbironi-ket {
+  color: #8b4513;
+  line-height: 1.5;
+}
+
+.galeri .langkah .gambar4 {
+  text-align: start;
+  display: flex;
+  align-items: center;
+  background-color: #fff8dc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(160, 82, 45, 0.5);
+  padding: 1.5rem;
+  max-width: 60rem;
+  width: 100%;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+
+.galeri .langkah .gambar4 img {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1.5rem;
+  border-bottom: none;
+}
+
+.galeri .langkah .gambar4 .Nglorod-title {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--dasar);
+}
+
+.galeri .langkah .gambar4 .Nglorod-ket {
+  color: #8b4513;
+  line-height: 1.5;
+}
+
+.galeri .langkah .gambar5 {
+  text-align: start;
+  display: flex;
+  align-items: center;
+  background-color: #fff8dc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(160, 82, 45, 0.5);
+  padding: 1.5rem;
+  max-width: 60rem;
+  width: 100%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.galeri .langkah .gambar5 img {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1.5rem;
+  border-bottom: none;
+}
+
+.galeri .langkah .gambar5 .Cuci-jemur-title {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--dasar);
+}
+
+.galeri .langkah .gambar5 .Cuci-jemur-ket {
+  color: #8b4513;
+  line-height: 1.5;
+}
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  padding: 70px 0 30px;
+  margin-top: 80px;
+}
+
+.container-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  color: #fff8dc;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background: linear-gradient(to right, #fff8dc, transparent);
+}
+
+.footer-about p {
+  color: #f5f5dc;
+  line-height: 1.8;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #f5f5dc;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-links a {
+  color: #f5f5dc;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
+
+/* Media */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgb(255, 248, 220);
+    width: 30rem;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--dasar);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover:after {
+    transform: scaleX(0.2);
+  }
+}
+
+/* Hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
