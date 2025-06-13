@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("../img/bgkontak.jpg");
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* centers the list horizontally */
+  gap: 30px; /* space between items */
+  padding: 0;
+  margin: 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #fdf6f0; /* or your preferred color */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #b8860b;
+}
+
+.nav-links li a::after {
+  content: " ";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #8b4513;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.box {
+  background-color: #fdf6f0;
+  background-color: transparent;
+  padding: 5rem;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+  margin-left: 23rem;
+  margin-top: 3rem;
+}
+h2 {
+  color: #a0522d;
+  text-align: center;
+}
+
+p {
+  color: #fff8dc;
+  text-align: center;
+  margin-top: -4%;
+}
+.ket {
+  color: #ffffff;
+  font-size: medium;
+  margin-top: 2%;
+  margin-left: 1rem;
+}
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  padding: 70px 0 30px;
+  margin-top: 80px;
+}
+
+.container-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: flex-start; /* Penting untuk menyamakan tinggi dari atas */
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  color: #fff8dc;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50px;
+  background: linear-gradient(to right, #fff8dc, transparent);
+}
+
+.footer-content p {
+  color: #f5f5dc;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #f5f5dc;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-links a {
+  color: #f5f5dc;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #fff;
+  padding-left: 10px;
+}
